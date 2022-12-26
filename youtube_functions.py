@@ -14,6 +14,10 @@ import youtube_dl
 # =============================================================================
 
 def download_audio(yt_url):
+    """Download a mp3 from YouTube url
+    Args:
+        yt_url (string): YouTube url
+    """
     ydl_opts = {
         'format': 'bestaudio/best',
         'postprocessors': [{
