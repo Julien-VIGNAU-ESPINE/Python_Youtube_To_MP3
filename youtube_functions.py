@@ -50,4 +50,8 @@ def get_url_from_title(title):
     return link
 
 def download_from_search(search):
+    """All dowload process
+    Args:
+        search (string): key word to search
+    """
     download_audio(get_url_from_title(search))
