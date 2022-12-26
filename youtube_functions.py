@@ -49,4 +49,4 @@ def get_url_from_title(title):
         link = (videosSearch.result()['result'][i]['link'])
     return link
 
-print(get_url_from_title("pyro barbare"))
+download_audio(get_url_from_title("pyro barbare"))
