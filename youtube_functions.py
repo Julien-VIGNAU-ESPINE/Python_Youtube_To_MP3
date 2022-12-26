@@ -4,10 +4,18 @@
 # 26/12/2022 22:55
 
 # =============================================================================
+# README
+# =============================================================================
+
+# link to the doc : 
+# https://stackoverflow.com/questions/62779030/youtube-search-on-python-3-8
+
+# =============================================================================
 # IMPORTATIONS
 # =============================================================================
 
 import youtube_dl
+from youtubesearchpython import VideosSearch
 
 # =============================================================================
 # CODE
@@ -29,4 +37,10 @@ def download_audio(yt_url):
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
         ydl.download([yt_url])
 
-download_audio("https://www.youtube.com/watch?v=o6RQuIbzwJk")
+def get_url_from_title(title):
+    videosSearch = VideosSearch(title, limit = 1)
+    for i in range(1):
+        link = (videosSearch.result()['result'][i]['link'])
+    return link
+
+print(get_url_from_title("pyro barbare"))
