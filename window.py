@@ -22,9 +22,17 @@ def clicked():
     """Button Placeholder"""
     print(txt.get())
 
+def open_popup():
+   top= Toplevel(window)
+   top.geometry("400x400")
+   top.configure(bg="#0D0")
+   top.title("SUCCESS")
+   Label(top, text= "SUCCESS!", font=('Arial bold', 50), bg="#0D0").place(x=0,y=0)
+
 def download():
     """Search and dowload the video on MP3 format"""
     download_from_search(txt.get())
+    open_popup()
 
 # Window configuration
 window = Tk()
