@@ -38,6 +38,12 @@ def download_audio(yt_url):
         ydl.download([yt_url])
 
 def get_url_from_title(title):
+    """Get the YouTube url from the result of the search
+    Args:
+        title (string): key word to search
+    Returns:
+        string: Link of the video
+    """
     videosSearch = VideosSearch(title, limit = 1)
     for i in range(1):
         link = (videosSearch.result()['result'][i]['link'])
