@@ -15,4 +15,4 @@ To use the app you just have to launch the .exe file in the bin folder.
 Then, type the name of the video you want to download, and it will download it
 in the same folder you run the exe.
 
-![Interface](!/img/preview.png)
+![Interface](./img/preview.png)
